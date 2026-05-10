@@ -1,0 +1,14 @@
+{
+  "model": "MSTN v2",
+  "input_dim": 54,
+  "hidden_dim": 64,
+  "n_params": 146694,
+  "epochs_run": 31,
+  "best_val_loss": 0.06486450900396595,
+  "test_mae": 11.035542488098145,
+  "test_rmse": 14.000543311339575,
+  "test_r2": 0.8452215790748596,
+  "test_mape": 35.668540954589844,
+  "ci_coverage": 88.457438708695,
+  "device": "cpu"
+}

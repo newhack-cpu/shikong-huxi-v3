@@ -1,0 +1,71 @@
+# ═══════════════════════════════════════════════════════════════
+# 时空呼吸 v3.5 · .gitignore
+# ═══════════════════════════════════════════════════════════════
+
+# ⚠️ 敏感信息 — 绝对不能提交
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+.env
+.env.local
+.env.*.local
+*.toml.bak
+*.toml.backup
+
+# IDE 历史(可能含密钥)
+.history/
+.vscode/.history/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 虚拟环境
+venv/
+env/
+.venv/
+ENV/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 大文件 / 缓存
+*.log
+*.tmp
+.cache/
+*.h5
+
+# 不用部署的大数据文件
+code/multi_city_real.csv
+code/test_offline_master.csv
+code/air_quality_data.csv
+code/*.zip
+code/*_predictions.csv
+
+# Build artifacts
+code/build_ppt.js
+code/collection_log.json
+code/ablation_results_*.csv
+code/ablation_results_*.tex
+
+# 提交材料(不用于运行)
+提交材料/
+提交材料*.zip
+submission/
+*.zip
+code/test_offline_master.json
+
+# 临时测试文件
+code/_test_*.txt
+
+# Streamlit 运行时
+.streamlit/cache/

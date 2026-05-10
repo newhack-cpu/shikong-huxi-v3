@@ -1,0 +1,22 @@
+{
+  "model": "MSTN v3",
+  "use_physical_loss": true,
+  "physical_lambdas": {
+    "rate": 0.1,
+    "wind": 0.05,
+    "neg": 1.0
+  },
+  "input_dim": 54,
+  "hidden_dim": 64,
+  "n_params": 146694,
+  "epochs_run": 30,
+  "best_val_loss": 0.06753303725505035,
+  "test_mae": 10.977608680725098,
+  "test_rmse": 13.955873430145537,
+  "test_r2": 0.8462076783180237,
+  "test_mape": 34.56452560424805,
+  "ci_coverage": 83.24958123953098,
+  "rate_violation_pct": 0.0,
+  "neg_violation_pct": 0.0,
+  "device": "cpu"
+}

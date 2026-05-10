@@ -1,0 +1,134 @@
+/* ════════════════════════════════════════════════════════════════
+   时空呼吸 v3 · 首屏 Loading 动画
+   粒子从四面汇聚 → 形成 SHIKONG · HUXI → 淡出
+   ════════════════════════════════════════════════════════════════ */
+
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(ellipse at center, #050d1a 0%, #02060d 60%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: splash-out 1s ease-in-out 3.5s forwards;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#splash-screen.gone { display: none; }
+
+@keyframes splash-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* 中心徽标:SHIKONG · HUXI */
+.splash-logo {
+  font-family: 'Orbitron', var(--f-display, sans-serif);
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 14px;
+  background: linear-gradient(90deg, #00c8f0 0%, #a0eeff 30%, #fff 50%, #a0eeff 70%, #00c8f0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation:
+    splash-logo-fade 1.2s ease-out 1.2s both,
+    titleShimmer 6s linear 2s infinite;
+  text-shadow: 0 0 30px rgba(0,212,255,.3);
+  position: relative;
+  z-index: 2;
+}
+@keyframes splash-logo-fade {
+  from { opacity: 0; letter-spacing: 30px; filter: blur(8px); }
+  to   { opacity: 1; letter-spacing: 14px; filter: blur(0); }
+}
+
+.splash-sub {
+  font-family: 'Exo 2', var(--f-ui, sans-serif);
+  font-size: .82rem;
+  letter-spacing: 8px;
+  color: rgba(0,212,255,.6);
+  margin-top: 18px;
+  opacity: 0;
+  animation: splash-sub-fade 1s ease-out 2.2s forwards;
+  position: relative;
+  z-index: 2;
+}
+@keyframes splash-sub-fade {
+  to { opacity: 1; }
+}
+
+.splash-progress {
+  width: 220px;
+  height: 2px;
+  background: rgba(255,255,255,.06);
+  border-radius: 2px;
+  margin-top: 28px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  animation: splash-sub-fade 1s ease-out 2.4s forwards;
+}
+.splash-progress::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--c-cyan, #00d4ff), transparent);
+  animation: splash-progress-slide 1.4s ease-in-out infinite;
+}
+@keyframes splash-progress-slide {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(220px); }
+}
+
+/* 粒子聚拢 SVG */
+.splash-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.splash-particles span {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: var(--c-cyan, #00d4ff);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--c-cyan, #00d4ff);
+  animation: splash-particle-converge 2s ease-out forwards;
+}
+@keyframes splash-particle-converge {
+  0% {
+    transform: translate(var(--sx, 0), var(--sy, 0)) scale(0.3);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 中心闪光环 */
+.splash-flash {
+  position: absolute;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--c-cyan, #00d4ff);
+  opacity: 0;
+  animation: splash-flash-burst 1s ease-out 1.8s forwards;
+  z-index: 1;
+}
+@keyframes splash-flash-burst {
+  0%   { opacity: 0; transform: scale(0); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(4); }
+}

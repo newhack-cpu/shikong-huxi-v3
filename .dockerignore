@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.bak
+*.bak_v37
+*.pth
+venv
+.env
+.streamlit
+experiments
+results
+paper_figures
+docs
+*.zip

@@ -1,0 +1,13 @@
+{
+  "decay_length_km": 256.0,
+  "decay_amplitude": 0.9652,
+  "max_corr": 0.9627,
+  "min_corr": 0.7458,
+  "mean_corr": 0.8701,
+  "closest_pair": "Dongsi-Nongzhanguan (3.9 km, r=0.9548)",
+  "farthest_pair": "Gucheng-Huairou (59.5 km, r=0.8463)",
+  "max_corr_pair": "Dongsi-Guanyuan (6.7 km, r=0.9627)",
+  "min_corr_pair": "Dingling-Wanshouxigong (47.4 km, r=0.7458)",
+  "n_stations": 12,
+  "total_records": 420768
+}

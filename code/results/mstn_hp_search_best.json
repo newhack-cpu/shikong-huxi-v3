@@ -1,0 +1,41 @@
+{
+  "searched_configs": 8,
+  "successful_configs": 8,
+  "best_by_r2": {
+    "name": "small_capacity_more_dropout",
+    "hidden_dim": 32,
+    "seq_len": 24,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "batch_size": 64,
+    "n_params": 38598,
+    "epochs_run": 19,
+    "best_val": 0.06535312490826549,
+    "test_mae": 10.807607650756836,
+    "test_rmse": 13.774443937456525,
+    "test_r2": 0.8501803874969482,
+    "time_seconds": 207.2659981250763
+  },
+  "best_by_mae": {
+    "name": "small_capacity_more_dropout",
+    "hidden_dim": 32,
+    "seq_len": 24,
+    "dropout": 0.2,
+    "lr": 0.001,
+    "batch_size": 64,
+    "n_params": 38598,
+    "epochs_run": 19,
+    "best_val": 0.06535312490826549,
+    "test_mae": 10.807607650756836,
+    "test_rmse": 13.774443937456525,
+    "test_r2": 0.8501803874969482,
+    "time_seconds": 207.2659981250763
+  },
+  "xgb_baseline": {
+    "mae": 9.76,
+    "r2": 0.902
+  },
+  "configs_beating_xgb_completely": 0,
+  "configs_beating_xgb_partially": 0,
+  "total_time_seconds": 2749.629796028137
+}

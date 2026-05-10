@@ -1,0 +1,85 @@
+{
+  "n_stations": 12,
+  "station_names": [
+    "Aotizhongxin",
+    "Changping",
+    "Dingling",
+    "Dongsi",
+    "Guanyuan",
+    "Gucheng",
+    "Huairou",
+    "Nongzhanguan",
+    "Shunyi",
+    "Tiantan",
+    "Wanliu",
+    "Wanshouxigong"
+  ],
+  "total_records": 420768,
+  "time_range_start": "2013-03-01 00:00:00",
+  "time_range_end": "2017-02-28 23:00:00",
+  "time_range_days": 1460,
+  "per_station_records": {
+    "Aotizhongxin": 35064,
+    "Changping": 35064,
+    "Dingling": 35064,
+    "Dongsi": 35064,
+    "Guanyuan": 35064,
+    "Gucheng": 35064,
+    "Huairou": 35064,
+    "Nongzhanguan": 35064,
+    "Shunyi": 35064,
+    "Tiantan": 35064,
+    "Wanliu": 35064,
+    "Wanshouxigong": 35064
+  },
+  "per_station_latlon": {
+    "Aotizhongxin": [
+      39.982,
+      116.397
+    ],
+    "Wanliu": [
+      39.987,
+      116.287
+    ],
+    "Dongsi": [
+      39.929,
+      116.417
+    ],
+    "Tiantan": [
+      39.886,
+      116.407
+    ],
+    "Guanyuan": [
+      39.929,
+      116.339
+    ],
+    "Gucheng": [
+      39.914,
+      116.184
+    ],
+    "Huairou": [
+      40.328,
+      116.628
+    ],
+    "Nongzhanguan": [
+      39.937,
+      116.461
+    ],
+    "Shunyi": [
+      40.127,
+      116.655
+    ],
+    "Wanshouxigong": [
+      39.878,
+      116.352
+    ],
+    "Changping": [
+      40.218,
+      116.22
+    ],
+    "Dingling": [
+      40.292,
+      116.22
+    ]
+  }
+}

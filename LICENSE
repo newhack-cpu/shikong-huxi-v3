@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 时空呼吸团队 (Temporal-Spatial Breathing Team)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+────────────────────────────────────────────────────────────────────────────
+
+本项目使用了以下开源数据/工具，致谢：
+
+* UCI Machine Learning Repository - Beijing PM2.5 Dataset (2010-2014)
+  Liang, X., et al. (2015). Assessing Beijing's PM2.5 pollution.
+
+* OpenAQ Open Air Quality Platform
+  https://openaq.org
+
+* PyTorch / scikit-learn / XGBoost / LightGBM / Streamlit
+  各自遵循其原始许可证
+
+* GB 3095-2012 《环境空气质量标准》(中国国家标准)
+* WHO Global Air Quality Guidelines (2021)
+* ASHRAE Standard 55-2020 Thermal Environmental Conditions
