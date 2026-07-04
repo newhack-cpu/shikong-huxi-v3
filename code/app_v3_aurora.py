@@ -251,7 +251,19 @@ def load_models() -> dict:
         'GradientBoosting': 'models/GradientBoosting_model.pkl',
         'Ridge':        'models/Ridge_model.pkl',
     }
-    return {n: joblib.load(p) for n, p in mp.items() if os.path.exists(p)}
+    loaded = {}
+    failed = []
+    for name, path in mp.items():
+        if not os.path.exists(path):
+            continue
+        try:
+            loaded[name] = joblib.load(path)
+        except Exception as e:
+            failed.append(f"{name}: {e}")
+    if failed:
+        st.warning(f"⚠️ 部分模型加载失败 (Python {'.'.join(map(str, __import__('sys').version_info[:2]))}): " +
+                   "; ".join(failed))
+    return loaded
 
 
 @st.cache_resource
@@ -360,6 +372,9 @@ except FileNotFoundError as e:
     st.error(f"❌ 数据文件缺失：{e}")
     st.code("python data_collector.py\npython feature_engineer.py\npython model_trainer.py")
     st.stop()
+except Exception as e:
+    st.error(f"❌ 启动失败：{e}")
+    st.stop()
 
 if not models:
     st.error("❌ 未找到模型文件，请先运行 python model_trainer.py")
@@ -377,7 +392,10 @@ city_sel = df_all['city'].iloc[0] if 'city' in df_all.columns else None
 d_max = df_all['timestamp'].max().date()
 d_min = df_all['timestamp'].min().date()
 date_range = (max(d_min, d_max - timedelta(days=60)), d_max)
-model_sel = 'LightGBM'
+available_models = list(models.keys())
+model_sel = 'LightGBM' if 'LightGBM' in models else (available_models[0] if available_models else 'LightGBM')
+if model_sel != 'LightGBM' and available_models:
+    st.info(f"ℹ️ LightGBM 不可用，已自动切换为 {model_sel}")
 show_n = 1000
 forecast_h = 24
 sfx_on = False
